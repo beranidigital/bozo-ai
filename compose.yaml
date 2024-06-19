@@ -11,6 +11,8 @@ services:
       LANGCHAIN_TRACING_V2: ${LANGCHAIN_TRACING_V2}
       LANGCHAIN_API_KEY: ${LANGCHAIN_API_KEY}
       PORT: 3000
+    volumes:
+      - ./bozo-ai-langchain-wiki:/app
   bozo-ai-discord-qna:
     build: bozo-ai-discord-qna
     restart: always
