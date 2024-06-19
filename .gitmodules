@@ -1,3 +1,6 @@
 [submodule "bozo-ai-langchain-wiki"]
 	path = bozo-ai-langchain-wiki
 	url = https://github.com/beranidigital/bozo-ai-langchain-wiki
+[submodule "bozo-ai-discord-qna"]
+	path = bozo-ai-discord-qna
+	url = https://github.com/beranidigital/bozo-ai-discord-qna
