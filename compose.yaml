@@ -1,6 +1,7 @@
 services:
   bozo-ai-langchain-wiki:
     build: bozo-ai-langchain-wiki
+    restart: always
     environment:
       AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT}
       AZURE_OPENAI_API_KEY: ${AZURE_OPENAI_API_KEY}
@@ -12,6 +13,7 @@ services:
       PORT: 3000
   bozo-ai-discord-qna:
     build: bozo-ai-discord-qna
+    restart: always
     environment:
       DiscordToken: ${DiscordToken}
       AskWikiURL: "http://bozo-ai-langchain-wiki:3000/agent/invoke"
