@@ -1,0 +1,18 @@
+services:
+  bozo-ai-langchain-wiki:
+    build: bozo-ai-langchain-wiki
+    environment:
+      AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT}
+      AZURE_OPENAI_API_KEY: ${AZURE_OPENAI_API_KEY}
+      AZURE_OPENAI_COMPLETION_DEPLOYMENT_NAME: ${AZURE_OPENAI_COMPLETION_DEPLOYMENT_NAME}
+      AZURE_OPENAI_CHAT_DEPLOYMENT_NAME: ${AZURE_OPENAI_CHAT_DEPLOYMENT_NAME}
+      AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME: ${AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME}
+      LANGCHAIN_TRACING_V2: ${LANGCHAIN_TRACING_V2}
+      LANGCHAIN_API_KEY: ${LANGCHAIN_API_KEY}
+      PORT: 3000
+  bozo-ai-discord-qna:
+    build: bozo-ai-discord-qna
+    environment:
+      DiscordToken: ${DiscordToken}
+      AskWikiURL: "http://bozo-ai-langchain-wiki:3000/agent/invoke"
+
